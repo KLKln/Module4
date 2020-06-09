@@ -7,9 +7,9 @@ class MyTestCase(unittest.TestCase):
     def test_price_under_10(self):
         value_under_10 = 7.99
         self.assertAlmostEqual(cc.calculate_price(value_under_10, 5, 10), 9.16, places=4)
-        self.assertAlmostEqual(cc.calculate_price(value_under_10, 5, 15), 9.16, places=4)
-        self.assertAlmostEqual(cc.calculate_price(value_under_10, 5, 20), 9.16, places=4)
-        self.assertAlmostEqual(cc.calculate_price(value_under_10, 10, 10), 9.16, places=4)
+        self.assertAlmostEqual(cc.calculate_price(value_under_10, 5, 15), 9.00, places=4)
+        self.assertAlmostEqual(cc.calculate_price(value_under_10, 5, 20), 8.84, places=4)
+        self.assertAlmostEqual(cc.calculate_price(value_under_10, 10, 10), 4.39, places=4 )
 
     def test_price_10_to_30(self):
         value_10_to_30 = 15.99
