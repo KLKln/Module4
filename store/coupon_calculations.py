@@ -1,10 +1,10 @@
 # enter price, cash coupon, and percent off coupon, return total
 # price, cash_coupon, percent_coupon
 def calculate_price(price, cash_coupon, percent_coupon):
-    price = float(input("Please enter the cost of purchase: "))
-    cash_coupon = float(input("Please enter the cash coupon amount: "))
+    #price = float(input("Please enter the cost of purchase: "))
+    #cash_coupon = float(input("Please enter the cash coupon amount: "))
     price_minus_cash_coupon = (price - cash_coupon)
-    percent_coupon = input("Please enter the percent off coupon: ")
+    #percent_coupon = input("Please enter the percent off coupon: ")
     percent_coupon = float(int(percent_coupon) / 100)
     percent_off_calc = price_minus_cash_coupon - ((1 - percent_coupon) * (price_minus_cash_coupon))
     pre_total = price_minus_cash_coupon - percent_off_calc
@@ -64,6 +64,16 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+    #main()
+    tax = .06
+    price = float(input("Please enter the cost of purchase: "))
+    cash_coupon = float(input("Please enter the cash coupon amount: "))
+    percent_coupon = input("Please enter the percent off coupon: ")
+    pre_total = calculate_price(price, cash_coupon, percent_coupon)
+    shipping = calculate_shipping(pre_total)
+    print('subtotal: ', '${:,.2f}'.format(pre_total))
+    print('shipping: ', '${:,.2f}'.format(shipping))
+    print('tax: ', '${:,.2f}'.format(((pre_total + shipping) * tax)))
+    print('total: ', '${:,.2f}'.format(pre_total + shipping + ((pre_total + shipping) * tax)))
 
 # '${:,.2f}'.format(subtotal + shipping + ((subtotal + shipping) * tax)))
