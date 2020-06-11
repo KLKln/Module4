@@ -1,6 +1,14 @@
 import unittest
 from store import coupon_calculations as cc
 
+"""
+Program: test_coupon_calculations.py
+Author: Kelly Klein
+Last date modified: 6/10/2020
+This program will use variables to test a program that takes user input for price, a cash coupon, and a percent coupon
+    and output those totals plus tax, shipping and a grand total
+"""
+
 
 class MyTestCase(unittest.TestCase):
     #def calculate_price(price, cash_coupon, percent_coupon):
