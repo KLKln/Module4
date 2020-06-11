@@ -13,10 +13,10 @@ class MyTestCase(unittest.TestCase):
 
     def test_price_10_to_30(self):
         value_10_to_30 = 15.99
-        self.assertAlmostEqual(cc.calculate_price(value_10_to_30, 5, 15), 9.16, places=4)
-        self.assertAlmostEqual(cc.calculate_price(value_10_to_30, 15, 25), 9.16, places=4)
-        self.assertAlmostEqual(cc.calculate_price(value_10_to_30, 20, 20), 9.16, places=4)
-        self.assertAlmostEqual(cc.calculate_price(value_10_to_30, 25, 10), 9.16, places=4)
+        self.assertAlmostEqual(cc.calculate_price(value_10_to_30, 5, 15), 9.3415, places=6)
+        self.assertAlmostEqual(cc.calculate_price(value_10_to_30, 15, 25), .7425, places=6)
+        self.assertAlmostEqual(cc.calculate_price(value_10_to_30, 10, 20), 4.792, places=6)
+        self.assertAlmostEqual(cc.calculate_price(value_10_to_30, 5, 10), 9.891, places=6)
 
 
 if __name__ == '__main__':
