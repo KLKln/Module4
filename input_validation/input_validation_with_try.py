@@ -8,25 +8,28 @@ This program will take user input and output a string
 """
 
 
-def average():
+def average(score1, score2, score3):
     # get input for scores
 
     # declare variables, use score1, score2, score3 in calc
-    score1 = int(score1_raw)
-    score2 = int(score2_raw)
-    score3 = int(score3_raw)
+    try:
+        average_scores = (score1 + score2 + score3) / 3
+        if score1 < 0:
+            raise ValueError
+    except ValueError:
+        raise ValueError
+    else:
+        return average_scores
 
-    average_scores = (score1 + score2 + score3) / 3
 
-    return average_scores
-
+# average_scores = (score1 + score2 + score3) / 3
 
 if __name__ == '__main__':
-
     first_name = input("Enter students first name: ")
     last_name = input('Enter students last name: ')
     age = input('Enter students age: ')
-    score1_raw = input('Enter first test score: ')
-    score2_raw = input('Enter second test score: ')
-    score3_raw = input('Enter third test score: ')
-    print(last_name, ',', first_name, 'age:', age, '|', 'average grade: ', average())
+    test1 = input('Enter first test score: ')
+    test2 = input('Enter second test score: ')
+    test3 = input('Enter third test score: ')
+    avg = average(int(test1), int(test2), int(test3))
+    print(last_name, ',', first_name, 'age:', age, '|', 'average grade: ', avg)
