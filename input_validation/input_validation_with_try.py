@@ -15,14 +15,14 @@ def average(score1, score2, score3):
     try:
         average_scores = (score1 + score2 + score3) / 3
         if score1 < 0:
-            raise ValueError
-    except ValueError:
-        raise ValueError
-    else:
+            raise ValueError('Please enter a positive number')
         return average_scores
 
+    except ValueError:
+        raise ValueError
 
 # average_scores = (score1 + score2 + score3) / 3
+
 
 if __name__ == '__main__':
     first_name = input("Enter students first name: ")
