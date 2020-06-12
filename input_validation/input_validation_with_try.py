@@ -18,7 +18,10 @@ def average(score1, score2, score3):
             raise ValueError('Please enter a positive number')
         elif score2 < 0:
             raise ValueError('Please enter a positive number')
-            return average_scores
+        elif score3 < 0:
+            raise ValueError('Please enter a positive number')
+
+        return average_scores
 
     except ValueError:
         raise ValueError
